@@ -50,12 +50,13 @@ export default class extends Component {
 
     this.editor = unlayer.createEditor({
       ...options,
-      id: this.editorId,
+      id: "email-container",
       displayMode: 'email',
       source: {
         name: pkg.name,
         version: pkg.version,
       },
+       customJS: ['https://testcrm.kraftshala.com/customTool.js'],
     });
 
     // All properties starting with on[Name] are registered as event listeners.
